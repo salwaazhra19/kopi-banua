@@ -1,0 +1,345 @@
+/* 1.reset dasar */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* 2. Variabel Merek */
+:root {
+    --utama: #6F4E37;  
+    --teks:  #2B2522;  
+    --kartu: #FFFFFF; 
+    --aksen: #C1502E;
+    --latar: #FAF7F3;
+    --radius: 12px;  
+    --jarak: 1.25rem;
+}
+
+/* 3.Tipografi dan latar */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;  
+    line-height: 1.6;
+    color: var(--teks);  
+    background: var(--latar);
+}
+
+h1, 
+h2, 
+h3 { 
+    font-family: "Poppins", Arial, sans-serif; 
+    line-height: 1.25; 
+}
+
+h1 { 
+    font-size: clamp(1.75rem, 5vw, 2.75rem); 
+    color: var(--utama); 
+}
+
+h2 { 
+    font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+    margin-bottom: var(--jarak); 
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+main { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 2rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+/* 4. Header dan navigasi */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--kartu);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: none;
+    color: var(--teks);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--aksen);
+}
+
+/* Tombol hamburger disembunyikan di desktop */
+.tombol-menu {
+    display: none;
+}
+
+/* 5.Formulir dan tombol */
+label {
+    display: black;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd5cd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    min-height: 44px;
+    padding: 0.85rem 1.75rem;
+    margin-top: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--aksen);
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* 6.Kartu menu */
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.kartu-menu {
+    min-width: 0;
+    padding: var(--jarak);
+    background: var(--kartu);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.kartu-menu img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.kartu-menu h3 {
+    margin: 0.75rem 0 0.25rem;
+}
+
+.kartu-menu a {
+    display: inline-block;
+    min-height: 44px;
+    line-height: 44px;
+}
+
+.harga {
+    color: var(--aksen);
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.kartu-menu:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 7.Bagian hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.hero-teks,
+.hero-foto {
+    flex: 1 1 340px;
+    min-width: 0;
+}
+
+.hero-foto img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* 8.Galeri */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+    );
+    gap: 1.25rem;
+}
+
+.galeri img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* 9.Tabel jam buka */
+.bungkus-tabel {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 320px;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #E6DED6;
+    text-align: left;
+}
+
+thead th {
+    background: var(--utama);
+    color: #FFFFFF;
+}
+
+/* 10.footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    background: var(--utama);
+    color: #F3EBE4;
+}
+
+footer > div {
+    flex: 1 1 240px;
+}
+
+footer h3 {
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+}
+
+footer a {
+    color: #F3EBE4;
+}
+
+/* 11.Tampilan ponsel */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .tombol-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav ul.tampil {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 0;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 2rem 1.25rem;
+    }
+
+    .wa-mengambang {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 20;
+    }
+}
+
+/* 12 Tampilan tablet */
+@media (min-width: 768px) {
+    .grid-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* 13.Tampilan desktop */
+@media (min-width: 1024px) {
+    .grid-menu {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+}
