@@ -4,7 +4,7 @@ Tugas 1 Pemrograman Web 1 - S1 Sistem Informasi FTI UNISKA MAB
 
 **Nama**  : Salwa Az zahra
 **NPM**   : 2510020172
-**Tautan**:
+**Tautan**: https://salwaazhra19.github.io/kopi-banua/
 
 ## Deskripsi
 Landing page untuk UMKM kedai kopi. Menampilkan profil usaha, daftar menu dan harga, jam buka, galeri, form pemesanan, dan lokasi.
